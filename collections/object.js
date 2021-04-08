@@ -29,8 +29,8 @@ let car = {
     year: 2020,
     miles: 10_000,
     owners: [
-        {name:"amy"},
-        {name:"josh"}
+        { name: "amy" },
+        { name: "josh" }
     ]
 }
 console.log(car.miles)
@@ -41,10 +41,10 @@ let person = {
     fName: "Atiyah",
     lName: "Ellerbee",
     age: 25,
-    fullName: function(){
+    fullName: function () {
         return `${this.fName} ${this.lName}`
     },
-    greet: function (greetWord){
+    greet: function (greetWord) {
         return `${greetWord}, ${this.fName}`
     }
 }
@@ -58,35 +58,6 @@ let builderObj = {}  // an empty obj
 console.log(builderObj)
 builderObj.name = "Atiyah"
 builderObj["age"] = 25
-builderObj.greet = function (greetWord){
+builderObj.greet = function (greetWord) {
     return `${greetWord}, ${this.name}`
 }
-console.log(builderObj)
-console.log(builderObj.greet("Hello"))
-
-// A look ahead at "classes", special type of way to build an obj
-let spot = {
-    breed: "Rott",
-    age: 3,
-    bark: function(){
-        return 'The ' + this.breed + ' Barks'
-    }
-}
-
-console.log(spot.bark())
-
-
-class Dog{
-    constructor(breed, age){
-        this.breed = breed
-        this.age = age
-    }
-    bark = fuction() {
-        return 'The ' + this.breed + ' Barks!'
-    }
-
-
-let fido = new Dog ("lab", 25)
-let lucky = new Dog("corgi", 12)
-let dogs = [new Dog("lab", 25), new Dog("corgi", 25)]
-dogs.forEach(dog => console.log(dog.bark()))
